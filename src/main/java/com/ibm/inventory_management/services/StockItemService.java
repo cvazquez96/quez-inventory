@@ -24,7 +24,8 @@ import com.ibm.inventory_management.models.StockItem;
 //@Profile("!mock")
 
 @Service
-@Primary
+// @Primary
+@Profile("cloudant")
 public class StockItemService implements StockItemApi {
     @Bean
     public static CloudantClient buildCloudant(CloudantConfig config) throws CloudServicesException { 
